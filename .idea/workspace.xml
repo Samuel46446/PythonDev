@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.TP5ex4.executor": "Run",
+    "Python.TP6ex1.executor": "Run",
+    "Python.TP6ex2.executor": "Run",
+    "Python.TP6ex3P1.executor": "Run",
+    "Python.TP6ex3P2.executor": "Run",
+    "Python.TP6ex3P3.executor": "Run",
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
