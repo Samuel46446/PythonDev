@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectUI/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectUI/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.BetterBinaries.executor": "Run",
     "Python.TP5ex4.executor": "Run",
     "Python.TP6ex1.executor": "Run",
     "Python.TP6ex2.executor": "Run",
@@ -72,5 +73,16 @@
       <updated>1729030287366</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
