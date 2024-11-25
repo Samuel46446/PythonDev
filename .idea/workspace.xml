@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp6/TP6ex3P3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp6/TP6ex3P3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp6/TP6ex3P4.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp6/TP6ex3P4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectUI/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectUI/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +44,21 @@
     "Python.TP6ex3P2.executor": "Run",
     "Python.TP6ex3P3.executor": "Run",
     "Python.TP6ex3P4.executor": "Run",
+    "Python.TP7Ex2.executor": "Run",
+    "Python.TP7Ex3.executor": "Run",
+    "Python.TP7Exercice1.executor": "Run",
+    "Python.TP7P1.executor": "Run",
+    "Python.TP7P2.executor": "Run",
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev"
+    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev/tp7"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp7" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp4" />
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp3" />
