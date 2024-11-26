@@ -3,11 +3,31 @@ import pygame
 import sys
 import random
 
-# Initialiser Pygame
-pygame.init()
-
 # Définir les dimensions de la fenêtre
 WIDTH, HEIGHT = 800, 600
+
+def onCollisionWithMonster(mob, playable, pvPlayer, xPlayer, yPlayer, xMob, yMob):
+    if playable.colliderect(mob):
+        pvPlayer=pvPlayer-1
+        xPlayer, yPlayer = 150, 150
+        xMob = 700
+        yMob = 300
+    return pvPlayer, xPlayer, yPlayer, xMob, yMob
+
+def ia_monster(b : bool, moveValue, sprint, param):
+    if b and moveValue > 0:
+        moveValue = moveValue - sprint
+    else:
+        b=False
+
+    if not b and moveValue + monsterSize < param:
+        moveValue = moveValue + sprint
+    else:
+        b=True
+    return b, moveValue
+
+# Initialiser Pygame
+pygame.init()
 
 # Créer la fenêtre
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -21,10 +41,19 @@ bY=500
 bonusSize=10
 bonus=pygame.draw.rect(screen, (255,0,255), (bX, bY, bonusSize, bonusSize))
 
+cmX=200
+cmY=100
+CrazyDown=True
+CrazyRight=True
+
+bmX=200
+bmY=500
+
 mX=700
 mY=300
 monsterSize=50
 MoveDown=True
+MoveRight=True
 
 score=0
 pv=5
@@ -58,29 +87,29 @@ while running:
 
     player = pygame.draw.rect(screen, (255,255,0), (square_x, square_y, square_size, square_size))  # Dessiner le carré
     bonus = pygame.draw.rect(screen, (255, 0, 255), (bX, bY, bonusSize, bonusSize))
-    monster = pygame.draw.rect(screen, (255, 0, 0), (mX, mY, monsterSize, monsterSize))
 
+    monster=None
+    monsterBig=None
+    monsterCrazy=None
 
-    if MoveDown and mY > 0:
-        mY = mY - speed
-    else:
-        MoveDown=False
-
-    if not MoveDown and mY + monsterSize < HEIGHT:
-        mY = mY + speed
-    else:
-        MoveDown=True
+    if score >= 3:
+        monster = pygame.draw.rect(screen, (255, 0, 0), (mX, mY, monsterSize, monsterSize))
+        MoveDown, mY = ia_monster(MoveDown, mY, speed, HEIGHT)
+        pv, square_x, square_y, mX, mY = onCollisionWithMonster(monster, player, pv, square_x, square_y, mX, mY)
+    if score >= 10:
+        monsterBig = pygame.draw.rect(screen, (56, 255, 89), (bmX, bmY, monsterSize, monsterSize))
+        MoveRight, bmX = ia_monster(MoveRight, bmX, speed, WIDTH)
+        pv, square_x, square_y, bmX, bmY = onCollisionWithMonster(monsterBig, player, pv, square_x, square_y, bmX, bmY)
+    if score >= 16:
+        monsterCrazy = pygame.draw.rect(screen, (255, 192, 203), (cmX, cmY, monsterSize, monsterSize))
+        CrazyDown, cmY = ia_monster(CrazyDown, cmY, speed, HEIGHT)
+        CrazyRight, cmX = ia_monster(CrazyRight, cmX, speed, WIDTH)
+        pv, square_x, square_y, cmX, cmY = onCollisionWithMonster(monsterCrazy, player, pv, square_x, square_y, cmX, cmY)
 
     if player.colliderect(bonus):
         score=score+1
         bX=randint(0+bonusSize, WIDTH-bonusSize)
         bY=randint(0+bonusSize, HEIGHT-bonusSize)
-
-    if player.colliderect(monster):
-        pv=pv-1
-        square_x, square_y = 150, 150
-        mX = 700
-        mY = 300
 
     score_text = police.render(f"Score: {score}", True, "white")
     pv_text = police.render(f"Pv: {pv}", True, "white")
@@ -89,6 +118,6 @@ while running:
     pygame.display.flip()
 
 # Quitter Pygame
-print("Vous n'avez plus de pv, votre score est de ", score, " points")
+print("Vous n'avez plus de pv, votre score est de", score, "points")
 pygame.quit()
 sys.exit()
