@@ -1,20 +1,15 @@
-from doctest import master
 from tkinter import  *
-from tkinter import Label
-
-from vboxapi import xrange
-
 
 def handle_keypress(event):
     """Print the character associated to the key pressed"""
-    print(event.char)
+    print(event.char['K'])
 
 def confirm(result):
     result = result + 1
 
-def increase():
-    value = int(popUp["text"])
-    popUp["text"] = f"{value + 1}"
+#def increase():
+#    value = int(popUp["text"])
+#    popUp["text"] = f"{value + 1}"
 
 class Carre:
     def __init__(self, x : int, y : int, w : int, h : int, color : str):
@@ -48,7 +43,8 @@ window = Tk()
 window.title("Mon jeu")
 window.geometry("300x400")
 window.minsize(300,400)
-window.resizable(300,400)
+window.resizable(False,False)
+
 
 #saisie = Entry()
 #name = saisie.get()

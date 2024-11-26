@@ -37,6 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.BetterBinaries.executor": "Run",
+    "Python.Game.executor": "Run",
     "Python.TP5ex4.executor": "Run",
     "Python.TP6ex1.executor": "Run",
     "Python.TP6ex2.executor": "Run",
@@ -52,7 +53,8 @@
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev/tp7"
+    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/pygame-1.9.6.tar.gz",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
