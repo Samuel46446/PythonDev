@@ -6,12 +6,12 @@ import random
 # Définir les dimensions de la fenêtre
 WIDTH, HEIGHT = 800, 600
 
-def onCollisionWithMonster(mob, playable, pvPlayer, xPlayer, yPlayer, xMob, yMob):
+def onCollisionWithMonster(mob, playable, pvPlayer, xPlayer, yPlayer, xMob, yMob, valueX, valueY):
     if playable.colliderect(mob):
         pvPlayer=pvPlayer-1
         xPlayer, yPlayer = 150, 150
-        xMob = 700
-        yMob = 300
+        xMob = valueX
+        yMob = valueY
     return pvPlayer, xPlayer, yPlayer, xMob, yMob
 
 def ia_monster(b : bool, moveValue, sprint, param):
@@ -38,20 +38,44 @@ BACKGROUND_COLOR = (0, 0, 0)  # Noir
 
 bX=400
 bY=500
-bonusSize=10
+bonusSize=20
 bonus=pygame.draw.rect(screen, (255,0,255), (bX, bY, bonusSize, bonusSize))
 
-cmX=200
-cmY=100
+#Default Coord Monsters
+MonsterBaseX=700
+MonsterBaseY=300
+BigBaseX=200
+BigBaseY=500
+CrazyBaseX=200
+CrazyBaseY=550
+SpeedyBaseX=400
+SpeedyBaseY=50
+
+mX=MonsterBaseX
+mY=MonsterBaseY
+bmX=BigBaseX
+bmY=BigBaseY
+cmX=CrazyBaseX
+cmY=CrazyBaseY
+smX=SpeedyBaseX
+smY=SpeedyBaseY
+
+monsterSize=50
+
+monsterTxt=pygame.image.load("textures/monster.png")
+BigmonsterTxt=pygame.image.load("textures/monsterBig.png")
+CrazymonsterTxt=pygame.image.load("textures/monsterCrazy.png")
+SpeedymonsterTxt=pygame.image.load("textures/monsterSpeedy.png")
+
+#Boolean Monsters
+    #For Crazy Monster
 CrazyDown=True
 CrazyRight=True
+    #For Speedy Monster
+SpeedyDown=True
+SpeedyRight=True
 
-bmX=200
-bmY=500
-
-mX=700
-mY=300
-monsterSize=50
+    #For Monsters and Big Monster
 MoveDown=True
 MoveRight=True
 
@@ -63,10 +87,16 @@ square_x, square_y = 150, 150
 square_size = 25
 speed=0.2
 
+#Heart System
+heartSpawn=20 # Quand le score est égal à 20 un coeur spawn
+heartTxt=pygame.image.load("textures/heart.png")
+playerTxt=pygame.image.load("textures/player.png")
+bonusTxt=pygame.image.load("textures/bonus.png")
+
 running = True
 while running:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:  # Fermer la fenêtre
+        if event.type == pygame.QUIT:
             running = False
             print("quit")
 
@@ -85,26 +115,55 @@ while running:
 
     screen.fill(BACKGROUND_COLOR)
 
-    player = pygame.draw.rect(screen, (255,255,0), (square_x, square_y, square_size, square_size))  # Dessiner le carré
-    bonus = pygame.draw.rect(screen, (255, 0, 255), (bX, bY, bonusSize, bonusSize))
+    player = pygame.Rect(square_x, square_y, square_size, square_size) #pygame.draw.rect(screen, (255,255,0), (square_x, square_y, square_size, square_size))
+    bonus = pygame.Rect(bX, bY, bonusSize, bonusSize)#pygame.draw.rect(screen, (255, 0, 255), (bX, bY, bonusSize, bonusSize))
+    texture_player = pygame.transform.scale(playerTxt, (player.width, player.height))
+    screen.blit(texture_player, player.topleft)
+    texture_bonus = pygame.transform.scale(bonusTxt, (bonus.width, bonus.height))
+    screen.blit(texture_bonus, bonus.topleft)
+
+    heart=None
+
+
+    if score >= heartSpawn:
+        heart=pygame.Rect(250, 250, 25, 25)
+        texture_heart = pygame.transform.scale(heartTxt, (heart.width, heart.height))
+        screen.blit(texture_heart, heart.topleft)
+        if player.colliderect(heart):
+            pv=pv+1
+            heartSpawn=heartSpawn+10
 
     monster=None
     monsterBig=None
     monsterCrazy=None
+    monsterSpeedy=None
 
     if score >= 3:
-        monster = pygame.draw.rect(screen, (255, 0, 0), (mX, mY, monsterSize, monsterSize))
+        monster = pygame.Rect(mX, mY, monsterSize, monsterSize)
         MoveDown, mY = ia_monster(MoveDown, mY, speed, HEIGHT)
-        pv, square_x, square_y, mX, mY = onCollisionWithMonster(monster, player, pv, square_x, square_y, mX, mY)
-    if score >= 10:
-        monsterBig = pygame.draw.rect(screen, (56, 255, 89), (bmX, bmY, monsterSize, monsterSize))
+        pv, square_x, square_y, mX, mY = onCollisionWithMonster(monster, player, pv, square_x, square_y, mX, mY, MonsterBaseX, MonsterBaseY)
+        texture_monster = pygame.transform.scale(monsterTxt, (monster.width, monster.height))
+        screen.blit(texture_monster, monster.topleft)
+    if score >= 6:
+        monsterBig = pygame.Rect(bmX, bmY, monsterSize+10, monsterSize+10)
         MoveRight, bmX = ia_monster(MoveRight, bmX, speed, WIDTH)
-        pv, square_x, square_y, bmX, bmY = onCollisionWithMonster(monsterBig, player, pv, square_x, square_y, bmX, bmY)
-    if score >= 16:
-        monsterCrazy = pygame.draw.rect(screen, (255, 192, 203), (cmX, cmY, monsterSize, monsterSize))
+        pv, square_x, square_y, bmX, bmY = onCollisionWithMonster(monsterBig, player, pv, square_x, square_y, bmX, bmY, BigBaseX, BigBaseY)
+        texture_bigmonster = pygame.transform.scale(BigmonsterTxt, (monsterBig.width, monsterBig.height))
+        screen.blit(texture_bigmonster, monsterBig.topleft)
+    if score >= 12:
+        monsterCrazy = pygame.Rect(cmX, cmY, monsterSize, monsterSize)
         CrazyDown, cmY = ia_monster(CrazyDown, cmY, speed, HEIGHT)
         CrazyRight, cmX = ia_monster(CrazyRight, cmX, speed, WIDTH)
-        pv, square_x, square_y, cmX, cmY = onCollisionWithMonster(monsterCrazy, player, pv, square_x, square_y, cmX, cmY)
+        pv, square_x, square_y, cmX, cmY = onCollisionWithMonster(monsterCrazy, player, pv, square_x, square_y, cmX, cmY, CrazyBaseX, CrazyBaseY)
+        texture_crazymonster = pygame.transform.scale(CrazymonsterTxt, (monsterCrazy.width, monsterCrazy.height))
+        screen.blit(texture_crazymonster, monsterCrazy.topleft)
+    if score >= 25:
+        monsterSpeedy = pygame.Rect(smX, smY, 30, 30)
+        SpeedyDown, smY = ia_monster(SpeedyDown, smY, speed+0.001, HEIGHT)
+        SpeedyRight, smX = ia_monster(SpeedyRight, smX, speed+0.001, WIDTH)
+        pv, square_x, square_y, smX, smY = onCollisionWithMonster(monsterSpeedy, player, pv, square_x, square_y, smX, smY, SpeedyBaseX, SpeedyBaseY)
+        texture_speedymonster = pygame.transform.scale(SpeedymonsterTxt, (monsterSpeedy.width, monsterSpeedy.height))
+        screen.blit(texture_speedymonster, monsterSpeedy.topleft)
 
     if player.colliderect(bonus):
         score=score+1
