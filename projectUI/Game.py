@@ -31,10 +31,9 @@ pygame.init()
 
 # Créer la fenêtre
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Mon jeu Pygame")
-
-# Couleur de fond
-BACKGROUND_COLOR = (0, 0, 0)  # Noir
+pygame.display.set_caption("Space Star")
+pygame.display.set_icon(pygame.image.load("textures/icon.png"))
+background = pygame.transform.scale(pygame.image.load("textures/background.png"), (WIDTH, HEIGHT))  # Ajuster à la taille de la fenêtre
 
 bX=400
 bY=500
@@ -100,6 +99,8 @@ while running:
             running = False
             print("quit")
 
+    screen.blit(background, (0, 0))
+
     if pv == 0:
         running=False
 
@@ -113,17 +114,13 @@ while running:
     if keys[pygame.K_DOWN] and square_y + square_size < HEIGHT:
         square_y += speed
 
-    screen.fill(BACKGROUND_COLOR)
-
     player = pygame.Rect(square_x, square_y, square_size, square_size) #pygame.draw.rect(screen, (255,255,0), (square_x, square_y, square_size, square_size))
     bonus = pygame.Rect(bX, bY, bonusSize, bonusSize)#pygame.draw.rect(screen, (255, 0, 255), (bX, bY, bonusSize, bonusSize))
     texture_player = pygame.transform.scale(playerTxt, (player.width, player.height))
     screen.blit(texture_player, player.topleft)
     texture_bonus = pygame.transform.scale(bonusTxt, (bonus.width, bonus.height))
     screen.blit(texture_bonus, bonus.topleft)
-
     heart=None
-
 
     if score >= heartSpawn:
         heart=pygame.Rect(250, 250, 25, 25)
@@ -169,7 +166,6 @@ while running:
         score=score+1
         bX=randint(0+bonusSize, WIDTH-bonusSize)
         bY=randint(0+bonusSize, HEIGHT-bonusSize)
-
     score_text = police.render(f"Score: {score}", True, "white")
     pv_text = police.render(f"Pv: {pv}", True, "white")
     screen.blit(score_text, (10, 10))  # Position (x=10, y=10)
