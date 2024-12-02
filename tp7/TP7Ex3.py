@@ -1,7 +1,10 @@
 n=int(input("saisir un entier : "))
 binaire=""
 q=n
-while q%2 == 0:
-    q=q//2
-    binaire=str(q%2)+binaire
+if q == 0:
+    binaire=0
+else:
+    while q != 0:
+        binaire=str(q%2)+binaire
+        q=q//2
 print(binaire)
