@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp7/TP7Ex3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp7/TP7Ex3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp7/TP7Exercice2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp7/TP7Exercice2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,8 @@
   "keyToString": {
     "Python.A2Test.executor": "Run",
     "Python.BetterBinaries.executor": "Run",
+    "Python.CTP1Ex3.executor": "Run",
+    "Python.CTP1Ex4.executor": "Run",
     "Python.Game.executor": "Run",
     "Python.TP5ex4.executor": "Run",
     "Python.TP6ex1.executor": "Run",
@@ -56,15 +56,17 @@
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/pygame-1.9.6.tar.gz",
+    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev/ctp",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\ctp" />
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp7" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev" />
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp4" />
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp3" />
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\tp5" />
