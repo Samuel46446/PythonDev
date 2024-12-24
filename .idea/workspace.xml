@@ -35,11 +35,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.2ListDim.executor": "Run",
+    "Python.3Ex1.executor": "Run",
+    "Python.3Ex2.executor": "Run",
     "Python.A2Test.executor": "Run",
     "Python.BetterBinaries.executor": "Run",
     "Python.CTP1Ex3.executor": "Run",
     "Python.CTP1Ex4.executor": "Run",
+    "Python.ColorApp.executor": "Run",
+    "Python.Def1.executor": "Run",
+    "Python.Ex65P81.executor": "Run",
     "Python.Game.executor": "Run",
+    "Python.InitList2.executor": "Run",
     "Python.TP5ex4.executor": "Run",
     "Python.TP6ex1.executor": "Run",
     "Python.TP6ex2.executor": "Run",
@@ -53,6 +60,7 @@
     "Python.TP7Exercice2.executor": "Run",
     "Python.TP7P1.executor": "Run",
     "Python.TP7P2.executor": "Run",
+    "Python.TestList.executor": "Run",
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
