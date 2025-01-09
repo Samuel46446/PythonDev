@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp8/3Ex1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp8/3Ex1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,41 +34,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.2ListDim.executor": "Run",
-    "Python.3Ex1.executor": "Run",
-    "Python.3Ex2.executor": "Run",
-    "Python.A2Test.executor": "Run",
-    "Python.BetterBinaries.executor": "Run",
-    "Python.CTP1Ex3.executor": "Run",
-    "Python.CTP1Ex4.executor": "Run",
-    "Python.ColorApp.executor": "Run",
-    "Python.Def1.executor": "Run",
-    "Python.Ex65P81.executor": "Run",
-    "Python.Game.executor": "Run",
-    "Python.InitList2.executor": "Run",
-    "Python.TP5ex4.executor": "Run",
-    "Python.TP6ex1.executor": "Run",
-    "Python.TP6ex2.executor": "Run",
-    "Python.TP6ex3P1.executor": "Run",
-    "Python.TP6ex3P2.executor": "Run",
-    "Python.TP6ex3P3.executor": "Run",
-    "Python.TP6ex3P4.executor": "Run",
-    "Python.TP7Ex2.executor": "Run",
-    "Python.TP7Ex3.executor": "Run",
-    "Python.TP7Exercice1.executor": "Run",
-    "Python.TP7Exercice2.executor": "Run",
-    "Python.TP7P1.executor": "Run",
-    "Python.TP7P2.executor": "Run",
-    "Python.TestList.executor": "Run",
-    "Python.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev/ctp",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.2ListDim.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3Ex1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3Ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.A2Test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BetterBinaries.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CTP1Ex3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CTP1Ex4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ColorApp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Def1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Ex65P81.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.InitList2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP5ex4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex3P1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex3P2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex3P3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP6ex3P4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7Ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7Ex3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7Exercice1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7Exercice2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7P1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TP7P2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TestList.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/samue/OneDrive/Bureau/NewDev/PythonDev/ctp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\samue\OneDrive\Bureau\NewDev\PythonDev\ctp" />
