@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af3e5f03-e99d-4582-9b19-34ce45b2b183" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp8/3Ex1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp8/3Ex1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp8/CCF.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp8/CCF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,7 @@
     &quot;Python.3Ex2.executor&quot;: &quot;Run&quot;,
     &quot;Python.A2Test.executor&quot;: &quot;Run&quot;,
     &quot;Python.BetterBinaries.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CCF.executor&quot;: &quot;Run&quot;,
     &quot;Python.CTP1Ex3.executor&quot;: &quot;Run&quot;,
     &quot;Python.CTP1Ex4.executor&quot;: &quot;Run&quot;,
     &quot;Python.ColorApp.executor&quot;: &quot;Run&quot;,
